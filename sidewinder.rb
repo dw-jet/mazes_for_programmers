@@ -1,4 +1,6 @@
+require_relative 'math_helpers.rb'
 class Sidewinder
+    include Randomize
     def self.on(grid)
         grid.each_row do |row|
             run = []
@@ -10,7 +12,7 @@ class Sidewinder
                 at_northern_boundary = (cell.north == nil)
 
                 should_close_out = 
-                  at_eastern_boundary || (!at_northern_boundary && rand(2) == 0)
+                  at_eastern_boundary || (!at_northern_boundary && Randomize::coin_flip == 0)
                 
                 if should_close_out
                     member = run.sample
