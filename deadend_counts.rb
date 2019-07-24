@@ -4,8 +4,9 @@ require_relative 'sidewinder'
 require_relative 'aldous_broder'
 require_relative 'wilsons'
 require_relative 'hunt_and_kill'
+require_relative 'recursive_backtracker'
 
-algorithms = [BinaryTree, Sidewinder, AldousBroder, Wilsons, HuntAndKill]
+algorithms = [BinaryTree, Sidewinder, AldousBroder, Wilsons, HuntAndKill, RecursiveBacktracker]
 
 tries = 100
 size = 20
